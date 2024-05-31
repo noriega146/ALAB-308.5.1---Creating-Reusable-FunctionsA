@@ -13,5 +13,3 @@ function sumarray(numbers) {
     const avg = sumarray(numbers) / numbers.lenght;
     return avg;
   }
-
-  
