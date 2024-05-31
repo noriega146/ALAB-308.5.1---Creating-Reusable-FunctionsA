@@ -1,12 +1,17 @@
 //1. 
 
 //A. Sum of an array of numbers:
-function sumArray(numbers) {
+function sumarray(numbers) {
     const sum = numbers.reduce((acc, curr) => acc + curr, 0);
     return sum;
   }
   
-  // Test usage:
-  const numbers1 = [1, 2, 3, 4, 5];
-  console.log(sumArray(numbers1)); // Output: 15
+  
+  //AVG of an array of numbers:
+  function averagearray(numbers){
+    if (numbers.lenght === 0) return 0; // avoids dividing by zero
+    const avg = sumarray(numbers) / numbers.lenght;
+    return avg;
+  }
+
   
