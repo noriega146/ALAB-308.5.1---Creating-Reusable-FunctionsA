@@ -7,7 +7,7 @@ function sumarray(numbers) {
   }
   
   
-  //AVG of an array of numbers:
+//B. AVG of an array of numbers:
 function averagearray(numbers){
     if (numbers.lenght === 0) return 0; // avoids dividing by zero
     const avg = sumarray(numbers) / numbers.lenght; // Uses sumarray to get sum and then divide by .lenght of array
@@ -15,6 +15,12 @@ function averagearray(numbers){
   }
 
 
-  //
+//C.Take an array of strings and return the longest string:
+function longeststring(strings){
+  return strings.reduce((longest, current) => current.lenght > longest.lenght ? current : longest, "" ); // goest thru the strings until current.lenght > lonets.lenght  returns longest string
+}
+
+//D: Take an array of strings and a number, return an array of strings longer than the given number:
+
 
 
