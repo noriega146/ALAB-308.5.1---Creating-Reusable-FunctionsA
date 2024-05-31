@@ -74,13 +74,20 @@ const averageAge = totalAge / data.length;
 //Part 3: Thinking Critically
 
 //A.Take an object and increment its age field:
-function incrementAge(obj) {
-  if (!obj.age) {
-    obj.age = 0;
+function incrementage(obj) {
+  // Check if the object has an age field
+  if (!obj.age) {   
+    obj.age = 0; //initialize age field to 0
   }
-  obj.age++;
-  obj.updated_at = new Date();
-  return obj;
+  obj.age++; // Increment the age field
+  obj.updated_at = new Date(); // Add or update the updated_at field with the current time
+  return obj;  // Return the updated object
 }
 
+//B.Take an object, make a copy, and increment the age field of the copy. Return the copy:
+function incrementagecopy(obj) {
+  // ...obj creates a shallow copy of the object 
+  const newObj = { ...obj, age: (obj.age || 0) + 1, updated_at: new Date() }; // increments age filed of the copy. 
+  return newObj;// returns copy
+}
 
